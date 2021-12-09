@@ -68,7 +68,7 @@ def makekeys():
 # 	data=r.get(f"{URL}create_keys")
 # 	data=data.json()
 # 	return render_template('make_keys.html',data=data)
-	return render_template('make_keys.html)
+	return render_template('make_keys.html')
 
 
 @app.route('/mining')
