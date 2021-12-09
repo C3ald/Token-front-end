@@ -65,9 +65,10 @@ def becomenode():
 @app.route('/makekeys')
 def makekeys():
 	""" allows you to make a wallet """
-	data=r.get(f"{URL}create_keys")
-	data=data.json()
-	return render_template('make_keys.html',data=data)
+# 	data=r.get(f"{URL}create_keys")
+# 	data=data.json()
+# 	return render_template('make_keys.html',data=data)
+	return render_template('make_keys.html)
 
 
 @app.route('/mining')
