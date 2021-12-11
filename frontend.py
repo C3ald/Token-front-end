@@ -13,7 +13,7 @@ app.secret_key = "fdakjwklhfdvbeapwfjpawejufdva[pkdfoea=ffaslfjdanlweofuiajppsed
 app.permanent_session_lifetime = timedelta(days=2)
 S = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # wallets = Wallet()
-URL = 'https://token-network.herokuapp.com/'
+URL = 'https://token-node0.herokuapp.com/'
 
 		
 
@@ -65,9 +65,10 @@ def becomenode():
 @app.route('/makekeys')
 def makekeys():
 	""" allows you to make a wallet """
-	data=r.get(f"{URL}create_keys")
-	data=data.json()
-	return render_template('make_keys.html',data=data)
+# 	data=r.get(f"{URL}create_keys")
+# 	data=data.json()
+# 	return render_template('make_keys.html',data=data)
+	return render_template('make_keys.html')
 
 
 @app.route('/mining')
