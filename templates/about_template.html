@@ -103,6 +103,21 @@
 <section>
     <div class="content">
         <h2>08</h2>
+        <h3>Cryptography and Privacy</h3>
+        <p>Privacy on the blockchain is a top priority! To ensure privacy all 
+            transaction addresses on the blockchain are encrypted and false 
+            transactions are added by the miners. The cryptography behind the keys isn't that complex, 
+        The private sender key is the main private key and is made with a password generator. Then, with asymmetric 
+        encryption algorithm to produce a new key that is your public view key, the private sender key is ran in the encryption algorithm again to get the public
+spend key, lastly the public view key is ran in an encryption algorithm to get a receive address. When an transaction is made both addresses on 
+the chain are encrypted with an asymmetrical encryption algorithm to prevent double spending and to stop forged transactions
+to verify your balance your view key is ran in the encryption algorithm that was used to produce your receive address and then is used to check on the blockchain.</p>
+                    <!-- <a href="{{url_for('mining')}}">click to start mining</a> -->
+    </div>
+</section>
+<section>
+    <div class="content">
+        <h2>09</h2>
         <h3>Source code of website</h3>
         <p>We like to keep our source code open to the public so anyone can contribute, inspect, and fix the code.</p>
                     <a href="https://github.com/C3ald/Token-front">Click to see the website source code</a>
