@@ -178,7 +178,7 @@ section .content h3::before
 section .content p
 {
     opacity: 0;
-    font-size: 1em;
+    font-size: 1.2em;
     transition: 1s;
 }
 section .content a
