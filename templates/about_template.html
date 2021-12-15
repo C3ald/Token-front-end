@@ -55,7 +55,7 @@
         <p>Mining on the blockchain is completed by your computer solving a puzzle which would need to match a hash with a certain
                     value. An example is a hash with zeros in the first five characters of the hash (i.e. 000005). 
                     You would need a wallet and to become a node in order to start mining. When blocks are mined the chain gets replaced and after a block is mined miners add decoy transactions and receive a reward from 
-                    a decoy wallet address </p>
+                    a decoy wallet address. </p>
                     <a href="{{url_for('mining')}}">click to start mining</a>
     </div>
 </section>
@@ -78,7 +78,7 @@
         <h3>Transactions</h3>
         <p>Transactions are made on the network and stored in the next block that other miners will mine out to verify your transaction. Since the blockchain stores the
                     data publicly, all transactions are publicly available. Your view key acts as your public key would be ran in an encryption algorithm. When making a transaction a stealth address is automatically generated from your view key that will be logged on to the blockchain. 
-                Decoy transactions are made on the chain when transactions are verified to prevent tracing and to ensure privacy. You still need a spend public key and spend private key to make transactions to make sure that you actually own the wallet you say you do.</p>
+                Decoy transactions are made on the chain when transactions are verified to prevent tracing and to ensure privacy. You still need a spend public key and spend private key to make transactions to make sure that you actually own the wallet you say you do. </p>
                     <a href="{{url_for('transact')}}">click to start making transactions</a>
     </div>
 </section>
@@ -111,7 +111,7 @@
         encryption algorithm to produce a new key that is your public view key; the private sender key is run in the encryption algorithm again to get the public
 spend key. Finally the public view key is run in an encryption algorithm to get a receive address. When an transaction is made, both addresses on 
 the chain are encrypted with an asymmetrical encryption algorithm to prevent double spending and to stop forged transactions.
-To verify your balance your view key is ran in the encryption algorithm that was used to produce your receive address and then is used to check on the blockchain.</p>
+To verify your balance your view key is ran in the encryption algorithm that was used to produce your receive address and then is used to check on the blockchain. </p>
                     <!-- <a href="{{url_for('mining')}}">click to start mining</a> -->
     </div>
 </section>
