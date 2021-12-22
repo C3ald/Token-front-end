@@ -77,23 +77,23 @@ def mining():
 	return render_template('mining.html')
 
 
-@app.route('/transact')
-def transact():
-	""" Shows transactions page """
-	if request.method == "POST":
-		url = r.post(f'{URL}add_transaction')
-		sender_public = request.form['senderpublickey']
-		sender_private = request.form['senderprivatekey']
-		# sender_phrase = request.form['senderpassphrase']
-		receiver_public = request.form['receiverpublickey']
-		amount = float(request.form['amount'])
-		data =     {'sender_publickey': sender_public,
-    		    'sender_privatekey': sender_private,
-    		    'receiver': receiver_public,
-    		    'amount': amount}
-		transaction = r.post(url=url, json=data)
-		return render_template('transactions.html')
-	return render_template('transactions.html')
+# @app.route('/transact')
+# def transact():
+# 	""" Shows transactions page """
+# 	if request.method == "POST":
+# 		url = r.post(f'{URL}add_transaction')
+# 		sender_public = request.form['senderpublickey']
+# 		sender_private = request.form['senderprivatekey']
+# 		# sender_phrase = request.form['senderpassphrase']
+# 		receiver_public = request.form['receiverpublickey']
+# 		amount = float(request.form['amount'])
+# 		data =     {'sender_publickey': sender_public,
+#     		    'sender_privatekey': sender_private,
+#     		    'receiver': receiver_public,
+#     		    'amount': amount}
+# 		transaction = r.post(url=url, json=data)
+# 		return render_template('transactions.html')
+# 	return render_template('transactions.html')
 
 
 @app.route('/home')
@@ -128,29 +128,29 @@ def snack():
 # 	""" the page where you make an account """
 # 	return render_template('register.html')
 
-@app.route('/register', methods =['POST', 'GET'])
-def login_user():
-	""" to add a user """
-	if "user" and "passw" in session:
-		flash("already logged in")
-		return redirect(url_for('login_wallet'))
-	if request.method == "POST":
-		user = request.form['username']
-		passw = request.form['password']
-	else:	
-		return redirect(url_for("login", user='user', passw='passw'))
+# @app.route('/register', methods =['POST', 'GET'])
+# def login_user():
+# 	""" to add a user """
+# 	if "user" and "passw" in session:
+# 		flash("already logged in")
+# 		return redirect(url_for('login_wallet'))
+# 	if request.method == "POST":
+# 		user = request.form['username']
+# 		passw = request.form['password']
+# 	else:	
+# 		return redirect(url_for("login", user='user', passw='passw'))
 		
 		
 
 
-@app.route("/logout")
-def logout():
-	""" the page to logout """
-	if "user" in session:
-		flash("logout was successful")
-	session.pop("user", None)
-	session.pop("username", None)
-	return redirect(url_for("login"))
+# @app.route("/logout")
+# def logout():
+# 	""" the page to logout """
+# 	if "user" in session:
+# 		flash("logout was successful")
+# 	session.pop("user", None)
+# 	session.pop("username", None)
+# 	return redirect(url_for("login"))
 
 
 @app.route('/become_node')
